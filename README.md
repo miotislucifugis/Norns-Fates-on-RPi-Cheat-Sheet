@@ -40,7 +40,7 @@ As shown here:  https://github.com/AkiyukiOkayasu/RaspberryPi_I2S_Master
 
 *Change resolution in this line to your screen’s resolution in this line:
 
-surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, 480, 320);
+ surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, 480, 320);
 
 *Then…“Add this line after the function block with your scale factor
 where 5 = 640/128
@@ -49,7 +49,7 @@ and 7.5 = 480/64
 (x = device res height/original cairo surface height)”
 somethng like this (for waveshare 3.5):
 
-cairo_scale(cr, 3.75,5);     
+ cairo_scale(cr, 3.75,5);     
 
 
 **Norns: (if your screen is showing a terminal window -(pi3))
@@ -66,9 +66,9 @@ cairo_scale(cr, 3.75,5);
 
 cd norns
 
-./waf configure
+ ./waf configure
 
-./waf -j 1
+ ./waf -j 1
 
 # Heads up -  
 You may (very likely) have to redo the jack and screen configurations steps again after Updating Norns!
