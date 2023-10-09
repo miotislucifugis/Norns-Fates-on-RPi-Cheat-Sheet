@@ -25,8 +25,10 @@ Add a # before the amixer line
 
 # Build a custom encoder overlay using one of these as a template  (for GPIO-wired encoders only!!): 
 https://github.com/okyeron/fates/tree/master/overlays
+
 Build the overlay file from the .dts  with dtc  and copy it to /boot/overlays
 Enable it in  /boot/config.txt
+
 As shown here:  https://github.com/AkiyukiOkayasu/RaspberryPi_I2S_Master
 
 # Fix screen 
@@ -45,26 +47,36 @@ and 7.5 = 480/64
 cairo_scale(cr, 3.75,5);     (for waveshare 3.5)
 
 **Norns: (if your screen is showing a terminal window -(pi3))
+
 ./norns/matronrc.lua
+
 change fb0 to fb1 
 
 Then recompile Norns with waf
+ 
  https://monome.org/docs/norns/compiling/
 
 cd norns
+
 ./waf configure
+
 ./waf -j 1
 
 # Enable uart midi:
 Follow the steps here:
+
 https://github.com/okyeron/shieldXL
 
 # Remove blinking cursor:
-after getting the screen working i still had a command line cursor present in the background.  to remove:
+after getting the screen working i still had a command line cursor present in the background. 
+to remove:
+
 https://techoverflow.net/2021/10/19/how-to-hide-all-boot-text-blinking-cursor-on-raspberry-pi/
 
  /boot/cmdline.txt
+ 
 change :  console=tty3  (tty1 to tty3)
+
 Add at the end of the line:   loglevel=3 quiet logo.nologo vt.global_cursor_default=0
 
 # Add Orac/Sidekick
@@ -72,13 +84,17 @@ Install orac :   https://llllllll.co/t/orac-sidekick-pure-data-and-sc-for-norns/
 
 If your sidekick display is “invisible”:
 create a restart script  for sidekick:
+
 sudo nano sidekickrestart.sh
 
 With these 2 lines:
+
 #!/bin/bash
+
 sudo systemctl restart sidekick
 
 open crontab (crontab -e)  add a line to the bottom:
+
 @reboot sh sidekickrestart.sh
 
 
