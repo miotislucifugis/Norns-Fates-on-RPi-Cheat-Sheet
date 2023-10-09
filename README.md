@@ -13,7 +13,11 @@ Boot it up.   If you have a screen attached and it is enabled with the proper ov
 # Change/set up jack service:
 norns will not  start if jack doesnt connect propery
 
-*Change the alsa device to your device (as listed aplay and arecord) in these files: 
+*check to see if you codec is recognized and available:
+         aplay -l
+         arecord -l
+
+*Change the alsa device to your device in these files: 
  
        /etc/systemd/system/norns-jack.service
  
@@ -81,7 +85,7 @@ the whole section should look like this (for waveshare 3.5)
 
 
 
-*After changing screen.c - recompile Norns with waf
+*After editing screen.c (and/or ./norns/matronrc.lua)  - recompile Norns with waf
  
  https://monome.org/docs/norns/compiling/
 
