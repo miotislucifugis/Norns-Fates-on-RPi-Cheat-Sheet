@@ -20,7 +20,7 @@ Change the alsa device to your device in these files:
  /etc/rc.local
 Add a # before the amixer line
 
-# Build a custom encoder overlay using one of these as a template  (for GPIO-wired encoders!!): 
+# Build a custom encoder overlay using one of these as a template  (for GPIO-wired encoders only!!): 
 https://github.com/okyeron/fates/tree/master/overlays
 Build the overlay file from the .dts  with dtc  and copy it to /boot/overlays
 Enable it in  /boot/config.txt
