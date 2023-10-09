@@ -1,6 +1,6 @@
 # Norns-Fates-on-RPi-Cheat-Sheet  2023
 I recently spent a bit of time trying to figure out how to install Norns on my diy Zynthian hardware and thought I share what I learned in one convienent cheat sheet.  
-Most of the info here was found at:  https://llllllll.co/t/norns-on-raspberry-pi/14148     A lot of good info but there was a big change in the norns code in 2022, so a lot of the earlier info is no longer relavant.  
+Most of the info here was found at:  https://llllllll.co/t/norns-on-raspberry-pi/14148    (The thread is long!  Check here for how to get hdmi or full headless working.   A lot of good stuff, but there was a big change in the norns code in 2022, so some of the info/steps posted prior to that may no longer be relavant or work.)
 
 # Get Norns (or Fates) .img
 Choose the appropriate precompiled .img and burn it  to SD.  
@@ -26,6 +26,7 @@ Boot it up.   If you have a screen attached and it is enabled with the proper ov
 (Add a # before the amixer line)
 
 # Build a custom encoder overlay using one of these as a template  (for GPIO-wired encoders only!!): 
+*replace the GPIO pin numbers with the your GPIOs
 https://github.com/okyeron/fates/tree/master/overlays
 
 *Build the overlay file from the .dts  with dtc  and copy it to /boot/overlays
