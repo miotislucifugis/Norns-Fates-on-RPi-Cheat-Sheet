@@ -109,10 +109,11 @@ https://techoverflow.net/2021/10/19/how-to-hide-all-boot-text-blinking-cursor-on
 
      loglevel=3 quiet logo.nologo vt.global_cursor_default=0
 
-(Cursor is gone! but I still have tiny 1, 2, or 3 displayed on the "ghost" command line whenever I press a switch?)
+
 
 # Add Orac/Sidekick
 Install orac :   https://llllllll.co/t/orac-sidekick-pure-data-and-sc-for-norns/26198
+(I reccommend doing this even if you arent interested in Orac.  Norns "seems" to run better, smoother afterward.   ?)
 
 If your sidekick display is “invisible”:
 
@@ -133,5 +134,8 @@ If your sidekick display is “invisible”:
 *add a line to the bottom:
 
      @reboot sh sidekickrestart.sh
+
+To do:   Resize orac/sidekick to fit screen resolution... Currently the display is 128x64.   Change it by editing the scale in nuilite code (NuiDevice.cpp)  and recompiling. 
+ 
 
 
