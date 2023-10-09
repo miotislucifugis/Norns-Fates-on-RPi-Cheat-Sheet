@@ -57,7 +57,9 @@ cairo_scale(cr, 3.75,5);
 
 *change fb0 to fb1 
 
-*Then recompile Norns with waf
+
+
+*After changing screen.c - recompile Norns with waf
  
  https://monome.org/docs/norns/compiling/
 
@@ -67,7 +69,8 @@ cd norns
 
 ./waf -j 1
 
-# Heads up -  You may (very likely) will have to redo these jack and screen configurations steps again after Updating Norns!
+# Heads up -  
+You may (very likely) have to redo the jack and screen configurations steps again after Updating Norns!
 
 # Enable uart midi:
 *Follow the steps here:
@@ -87,6 +90,8 @@ https://techoverflow.net/2021/10/19/how-to-hide-all-boot-text-blinking-cursor-on
 *Add at the end of the line:  
 
 loglevel=3 quiet logo.nologo vt.global_cursor_default=0
+
+(Cursor is gone! but I still have tiny 1, 2, or 3 displayed on the "ghost" command line whenever I press a switch?)
 
 # Add Orac/Sidekick
 Install orac :   https://llllllll.co/t/orac-sidekick-pure-data-and-sc-for-norns/26198
