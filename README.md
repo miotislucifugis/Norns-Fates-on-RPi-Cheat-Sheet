@@ -14,6 +14,7 @@ Boot it up.   If you have a screen attached and it is enabled with the proper ov
 norns will not  start if jack doesnt connect propery
 
 *check to see if you codec is recognized and available:
+         
          aplay -l
          arecord -l
 
