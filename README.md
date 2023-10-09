@@ -13,11 +13,11 @@ Boot it up.   If you have a screen attached and it is enabled with the proper ov
 # Change/set up jack service:
 *Change the alsa device to your device (as listed aplay and arecord) in these files: 
  
- /etc/systemd/system/norns-jack.service
+       /etc/systemd/system/norns-jack.service
  
- ./norns-image/config/norns-jack.service    (not necessary)
+      ./norns-image/config/norns-jack.service    (not necessary)
  
-./fates/install/norns/files/norns-jack.service   (not necessary)
+      ./fates/install/norns/files/norns-jack.service   (not necessary)
 
 **Norns: if your codec does not have amixer controls, disable the amixer call in:  
  
@@ -30,7 +30,8 @@ Boot it up.   If you have a screen attached and it is enabled with the proper ov
 https://github.com/okyeron/fates/tree/master/overlays
 
 *Build the overlay file from the .dts  with dtc  and copy it to /boot/overlays
-*Enable it in  /boot/config.txt
+*Enable it in  
+        /boot/config.txt
 
 As shown here:  https://github.com/AkiyukiOkayasu/RaspberryPi_I2S_Master
 
