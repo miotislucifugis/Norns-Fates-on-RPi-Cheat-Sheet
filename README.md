@@ -21,9 +21,9 @@ Boot it up.   If you have a screen attached and it is enabled with the proper ov
 
 **Norns: if your codec does not have amixer controls, disable the amixer call in:  
  
- /etc/rc.local
+      /etc/rc.local
 
-(Add a # before the amixer line)
+      (Add a # before the amixer line)
 
 # Build a custom encoder overlay using one of these as a template  (for GPIO-wired encoders only!!): 
 *replace the GPIO pin numbers with the your GPIOs
@@ -53,9 +53,9 @@ cairo_scale(cr, 3.75,5);
 
 **Norns: (if your screen is showing a terminal window -(pi3))
 
-./norns/matronrc.lua
+           ./norns/matronrc.lua
 
-*change fb0 to fb1 
+           *change fb0 to fb1 
 
 
 
@@ -78,7 +78,7 @@ You may (very likely) have to redo the jack and screen configurations steps agai
 https://github.com/okyeron/shieldXL
 
 # Remove blinking cursor:
-after getting the screen working i still had a command line cursor present in the background. 
+after getting the screen working (for Norns) i still had a command line cursor present in the background. 
 to remove:
 
 https://techoverflow.net/2021/10/19/how-to-hide-all-boot-text-blinking-cursor-on-raspberry-pi/
