@@ -1,6 +1,6 @@
 # Norns-Fates-on-RPi-Cheat-Sheet  2023
-A cheat sheet for installing Norns/Fates on Raspberry Pi.   
-Most of the info here was found at:  https://llllllll.co/t/norns-on-raspberry-pi/14148  
+I recently spent a bit of time trying to figure out how to install Norns on my diy Zynthian hardware and thought I share what I learned in one convienent cheat sheet.  
+Most of the info here was found at:  https://llllllll.co/t/norns-on-raspberry-pi/14148
 
 # Get Norns (or Fates) .img
 Choose the appropriate precompiled .img and burn it  to SD.  
@@ -16,7 +16,7 @@ Change the alsa device to your device in these files:
  ./norns-image/config/norns-jack.service    (not necessary)
 ./fates/install/norns/files/norns-jack.service   (not necessary)
 
-**Norns: if your codec does not have amixer controls, disable the amixer call:  
+**Norns: if your codec does not have amixer controls, disable the amixer call in:  
  /etc/rc.local
 Add a # before the amixer line
 
