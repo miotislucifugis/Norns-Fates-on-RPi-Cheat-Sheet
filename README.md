@@ -55,7 +55,7 @@ norns expects a 128x64 display.  if you are using something larger, Norns will a
 where 5 = 640/128
 (x = device res width/original cairo surface width)
 and 7.5 = 480/64
-(x = device res height/original cairo surface height)”
+(x = device res height/original cairo surface height)”    ....so thats (cr,5, 7.5) for a 640x480 display,   (cr,3.75, 5) for a 480x320  ... etc
 
      cairo_scale(cr, 3.75,5);
    
