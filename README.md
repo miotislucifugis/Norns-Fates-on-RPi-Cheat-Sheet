@@ -21,7 +21,8 @@ Change the alsa device to your device in these files:
 
 **Norns: if your codec does not have amixer controls, disable the amixer call in:  
  /etc/rc.local
-Add a # before the amixer line
+
+(Add a # before the amixer line)
 
 # Build a custom encoder overlay using one of these as a template  (for GPIO-wired encoders only!!): 
 https://github.com/okyeron/fates/tree/master/overlays
@@ -43,8 +44,9 @@ where 5 = 640/128
 (x = device res width/original cairo surface width)
 and 7.5 = 480/64
 (x = device res height/original cairo surface height)”
+somethng like this (for waveshare 3.5):
 
-cairo_scale(cr, 3.75,5);     (for waveshare 3.5)
+cairo_scale(cr, 3.75,5);     
 
 **Norns: (if your screen is showing a terminal window -(pi3))
 
