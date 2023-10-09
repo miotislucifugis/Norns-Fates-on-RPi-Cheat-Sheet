@@ -5,7 +5,7 @@ Most of the info here was found at:  https://llllllll.co/t/norns-on-raspberry-pi
 # Get Norns (or Fates) .img
 Choose the appropriate precompiled .img and burn it  to SD.  
 
-(Norns vs Norns shieled vs Fates? Essentially they are all the same with minor changes for minor hardware revisions.   For installing on Rpi w/ custom hardware, other than choosing the Pi3 or Pi4 .img, it shouldn't matter much which version you choose.  Norns is the "official" version and is maintained by Monome, while Fates is a (currently up to date) fork. Both do the same thing.  Fates seems a little easier to install- Norns may involve a few extra steps as noted with **.)
+(Norns vs Norns shield vs Fates?  Essentially they are all the same with minor changes for minor hardware revisions.   For installing on Rpi w/ custom hardware, other than choosing the Pi3 or Pi4 .img, it shouldn't matter much which version you choose.  Norns is the "official" version and is maintained by Monome, while Fates is a (currently up to date) fork. Both do the same thing.  Fates seems a little easier to install- Norns may involve a few extra steps as noted with **.)
 
 Afterward, add your necessary screen and audio codec overlays to /boot/overlays if they arent already present.
 Boot up.   Should display  some type of “jack fail” message.  SSH in and expand the disk as explained in the norns/fates install instructions.
