@@ -22,6 +22,25 @@ Most of the info here was found at:  https://llllllll.co/t/norns-on-raspberry-pi
 *SSH in and expand the disk as explained in the norns/fates install instructions.
 
 
+# Build a custom encoder overlay using one of these as a template  (for GPIO-wired encoders only!!): 
+*Create a new .dts file:
+
+     sudo nano your__overlay.dts
+
+*copy/paste one of the encoder overlay from the following link templates inside and replace the GPIO pin numbers with the your GPIOs
+https://github.com/okyeron/fates/tree/master/overlays.    Save. Exit 
+
+*Build the overlay file from the .dts  with dtc and copy it to /boot/overlays
+
+      dtc -@ -H epapr -O dtb -o your_overlay.dtbo -Wno-unit_address_vs_reg your_overlay.dts
+      
+      sudo cp your_overlay.dtbo /boot/overlays
+
+*Enable it in  
+     
+     /boot/config.txt
+
+
 # Change/set up jack service:
 norns will not start if jack doesnt connect, so we need to configure jack service to use our codec.
 
@@ -109,22 +128,15 @@ the whole section should look like this (for waveshare 3.5)
 
  ./waf -j 1
 
+
+*reboot and see if you are greeted with the sparkle screen
+
+*if so, you can set up wifi and upgrade norns via the norns "settings" menu.... however....
+
 # Heads up -  
 You may (very likely) have to redo the jack and screen configurations steps again after Updating Norns!
 
-If you
 
-# Build a custom encoder overlay using one of these as a template  (for GPIO-wired encoders only!!): 
-*replace the GPIO pin numbers with the your GPIOs
-https://github.com/okyeron/fates/tree/master/overlays
-
-*Build the overlay file from the .dts  with dtc  and copy it to /boot/overlays
-
-*Enable it in  
-     
-     /boot/config.txt
-
-follow the example here:  https://github.com/AkiyukiOkayasu/RaspberryPi_I2S_Master
 
 
 # Enable uart midi:
