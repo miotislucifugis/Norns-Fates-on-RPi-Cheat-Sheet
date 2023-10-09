@@ -18,7 +18,7 @@ Most of the info here was found at:  https://llllllll.co/t/norns-on-raspberry-pi
 
 
 # Change/set up jack service:
-norns will not start if jack doesnt connect propery so we need to configure jack service to use our codec.
+norns will not start if jack doesnt connect, so we need to configure jack service to use our codec.
 
 *check to see if you codec is recognized and available:
          
@@ -35,7 +35,9 @@ norns will not start if jack doesnt connect propery so we need to configure jack
 
 Just change the bit about the device (-d hw:sndrpimonome)  
 
-My codec appears as the same card but has different device numbers for the playback and capture, so I need to state specifically the capture (-C) and playback (-P)  devices.   The line looks like this for my custom codec:
+      -d hw:your_card_name
+      
+My codec appears as the same card but has different device numbers for the playback and capture, so I need to state specifically the capture (-C) and playback (-P)  devices.   For my custom codec, the line looks like this :
 
       ExecStart=/usr/bin/jackd -R -P 95 -d alsa -Chw:GenericStereoAu,1 -Phw:GenericStereoAu,0 -r 48000 -n 3 -p 128 -S -s
 
