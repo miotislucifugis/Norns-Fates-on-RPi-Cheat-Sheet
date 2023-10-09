@@ -1,5 +1,5 @@
 # Norns-Fates-on-RPi-Cheat-Sheet  2023
-I recently spent a bit of time trying to figure out how to install Norns on my diy Zynthian hardware and thought I'd all the file names , edits, and links in one convienent cheat sheet. 
+I recently spent a bit of time trying to figure out how to install Norns on custom hardware and thought I'd share all the file names, edits, and links in one convienent cheat sheet. 
 Most of the info here was found at:  https://llllllll.co/t/norns-on-raspberry-pi/14148    (The thread is long!  Check here for how to get hdmi or full headless working.   A lot of good stuff, but there was a big change in the norns code in 2022, so some of the info/steps posted prior to that may no longer be relavant or work.)
 
 # Get Norns (or Fates) .img
@@ -7,7 +7,7 @@ Choose the appropriate precompiled .img and burn it  to SD.
 
 (Norns vs Norns shield vs Fates?  Essentially they are all the same with minor changes for minor hardware revisions.   For installing on Rpi w/ custom hardware, other than choosing the Pi3 or Pi4 .img, it shouldn't matter much which version you choose.  Norns is the "official" version and is maintained by Monome, while Fates is a (currently up to date) fork. Both do the same thing.  Fates seems a little easier to install- Norns may involve a few extra steps as noted with **.)
 
-Afterward, add your necessary screen and audio codec overlays to /boot/overlays if they arent already present and enable them in /boot/config.txt.  If you are a zynthian user, you can copy these directly from the zynthian one.
+Afterward, add your necessary screen and audio codec overlays to /boot/overlays if they arent already present and enable them in /boot/config.txt.  If you are a zynthian user, you can copy these directly from the zynthian one.   (Some screens and codec may require further setup/ drivers installed)
 Boot it up.   If you have a screen attached and it is enabled with the proper overlay, it should  display  some type of “jack fail” message.  SSH in and expand the disk as explained in the norns/fates install instructions.
 
 # Change/set up jack service:
