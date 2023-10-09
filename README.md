@@ -7,10 +7,12 @@ Choose the appropriate precompiled .img and burn it  to SD.
 
 (Norns vs Norns shield vs Fates?  Essentially they are all the same with minor changes for minor hardware revisions.   For installing on Rpi w/ custom hardware, other than choosing the Pi3 or Pi4 .img, it shouldn't matter much which version you choose.  Norns is the "official" version and is maintained by Monome, while Fates is a (currently up to date) fork. Both do the same thing.  Fates seems a little easier to install- Norns may involve a few extra steps as noted with **.)
 
-Afterward, add your necessary screen and audio codec overlays to /boot/overlays if they arent already present and enable them in /boot/config.txt.  If you are a zynthian user, you can copy these directly from the zynthian one.   (Some screens and codec may require further setup/ drivers installed)
+Afterward, add your necessary screen and audio codec overlays to /boot/overlays if they arent already present and enable them in /boot/config.txt.  If you are a zynthian user, you can copy these lines directly from the zynthian config.txt.   (Some screens and codec may require further setup/ drivers installed)
 Boot it up.   If you have a screen attached and it is enabled with the proper overlay, it should  display  some type of “jack fail” message.  SSH in and expand the disk as explained in the norns/fates install instructions.
 
 # Change/set up jack service:
+norns will not  start if jack doesnt connect propery
+
 *Change the alsa device to your device (as listed aplay and arecord) in these files: 
  
        /etc/systemd/system/norns-jack.service
