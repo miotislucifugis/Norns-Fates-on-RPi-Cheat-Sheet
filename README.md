@@ -1,6 +1,6 @@
 # Norns-Fates-on-RPi-Cheat-Sheet  2023
 I recently spent a bit of time trying to figure out how to install Norns on my diy Zynthian hardware and thought I share what I learned in one convienent cheat sheet.  
-Most of the info here was found at:  https://llllllll.co/t/norns-on-raspberry-pi/14148
+Most of the info here was found at:  https://llllllll.co/t/norns-on-raspberry-pi/14148     A lot of good info but there was a big change in the norns code in 2022, so a lot of the earlier info is no longer relavant.  
 
 # Get Norns (or Fates) .img
 Choose the appropriate precompiled .img and burn it  to SD.  
