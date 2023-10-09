@@ -90,7 +90,7 @@ https://techoverflow.net/2021/10/19/how-to-hide-all-boot-text-blinking-cursor-on
 
 *Add at the end of the line:  
 
-    loglevel=3 quiet logo.nologo vt.global_cursor_default=0
+     loglevel=3 quiet logo.nologo vt.global_cursor_default=0
 
 (Cursor is gone! but I still have tiny 1, 2, or 3 displayed on the "ghost" command line whenever I press a switch?)
 
