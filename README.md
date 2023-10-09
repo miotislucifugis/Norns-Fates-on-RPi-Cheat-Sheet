@@ -74,7 +74,8 @@ My codec appears as the same card but has different device numbers for the playb
 
 
 # Fix screen 
-norns expects a 128x64 display.  if you are using something larger, Norns will appear tiny! so we need to change the resolution and scale:
+This works with a cheap Waveshare 3.5-style SPI touchscreen display.  I believe that getting HDMI screens to work involves more steps.  Check out the lines forum (link above) for more details.
+Norns expects a 128x64 display.  if you are using something larger, Norns will appear tiny! so we need to change the resolution and scale:
 
     ./norns/matron/src/hardware/screen.c
 
