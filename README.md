@@ -21,9 +21,9 @@ Boot it up.   If you have a screen attached and it is enabled with the proper ov
 
 **Norns: if your codec does not have amixer controls, disable the amixer call in:  
  
-      /etc/rc.local
+           /etc/rc.local
 
-      (Add a # before the amixer line)
+  (Add a # before the amixer line)
 
 # Build a custom encoder overlay using one of these as a template  (for GPIO-wired encoders only!!): 
 *replace the GPIO pin numbers with the your GPIOs
@@ -31,16 +31,16 @@ https://github.com/okyeron/fates/tree/master/overlays
 
 *Build the overlay file from the .dts  with dtc  and copy it to /boot/overlays
 *Enable it in  
-        /boot/config.txt
+     /boot/config.txt
 
 As shown here:  https://github.com/AkiyukiOkayasu/RaspberryPi_I2S_Master
 
 # Fix screen 
-./norns/matron/src/hardware/screen.c
+    ./norns/matron/src/hardware/screen.c
 
 *Change resolution in this line to your screen’s resolution in this line:
 
- surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, 480, 320);
+     surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, 480, 320);
 
 *Then…“Add this line after the function block with your scale factor
 where 5 = 640/128
@@ -49,14 +49,14 @@ and 7.5 = 480/64
 (x = device res height/original cairo surface height)”
 somethng like this (for waveshare 3.5):
 
- cairo_scale(cr, 3.75,5);     
+    cairo_scale(cr, 3.75,5);     
 
 
 **Norns: (if your screen is showing a terminal window -(pi3))
 
-           ./norns/matronrc.lua
-
-           *change fb0 to fb1 
+           ./norns/matronrc.lua      
+           
+    *change fb0 to fb1 
 
 
 
@@ -64,7 +64,7 @@ somethng like this (for waveshare 3.5):
  
  https://monome.org/docs/norns/compiling/
 
-cd norns
+  cd norns
 
  ./waf configure
 
@@ -84,13 +84,13 @@ to remove:
 
 https://techoverflow.net/2021/10/19/how-to-hide-all-boot-text-blinking-cursor-on-raspberry-pi/
 
- /boot/cmdline.txt
+     /boot/cmdline.txt
  
 *change :  console=tty1 to console=tty3
 
 *Add at the end of the line:  
 
-loglevel=3 quiet logo.nologo vt.global_cursor_default=0
+    loglevel=3 quiet logo.nologo vt.global_cursor_default=0
 
 (Cursor is gone! but I still have tiny 1, 2, or 3 displayed on the "ghost" command line whenever I press a switch?)
 
@@ -101,20 +101,20 @@ If your sidekick display is “invisible”:
 
 *create a restart script  for sidekick:
 
-sudo nano sidekickrestart.sh
+     sudo nano sidekickrestart.sh
 
 *Include these 2 lines:
 
-#!/bin/bash
+     #!/bin/bash
 
-sudo systemctl restart sidekick
+     sudo systemctl restart sidekick
 
 *open crontab 
 
-crontab -e  
+     crontab -e  
 
 *add a line to the bottom:
 
-@reboot sh sidekickrestart.sh
+     @reboot sh sidekickrestart.sh
 
 
