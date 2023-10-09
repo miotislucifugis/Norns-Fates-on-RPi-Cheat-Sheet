@@ -1,5 +1,5 @@
 # Norns-Fates-on-RPi-Cheat-Sheet  2023
-I recently spent a bit of time trying to figure out how to install Norns on my diy Zynthian hardware and thought I'd all the steps and links in one convienent cheat sheet. 
+I recently spent a bit of time trying to figure out how to install Norns on my diy Zynthian hardware and thought I'd all the file names , edits, and links in one convienent cheat sheet. 
 Most of the info here was found at:  https://llllllll.co/t/norns-on-raspberry-pi/14148    (The thread is long!  Check here for how to get hdmi or full headless working.   A lot of good stuff, but there was a big change in the norns code in 2022, so some of the info/steps posted prior to that may no longer be relavant or work.)
 
 # Get Norns (or Fates) .img
