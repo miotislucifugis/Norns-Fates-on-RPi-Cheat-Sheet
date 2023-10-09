@@ -42,7 +42,7 @@ As shown here:  https://github.com/AkiyukiOkayasu/RaspberryPi_I2S_Master
 
      surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, 120, 60);
 
-*Then…(from lines forum)  “Add this line after the function block with your scale factor
+*Then…(quoting from lines forum)  “Add this line after the function block with your scale factor
 where 5 = 640/128
 (x = device res width/original cairo surface width)
 and 7.5 = 480/64
