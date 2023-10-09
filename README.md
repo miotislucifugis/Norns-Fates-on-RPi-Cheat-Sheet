@@ -40,16 +40,33 @@ As shown here:  https://github.com/AkiyukiOkayasu/RaspberryPi_I2S_Master
 
 *Change resolution in this line to your screen’s resolution in this line:
 
-     surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, 480, 320);
+     surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, 120, 60);
 
 *Then…“Add this line after the function block with your scale factor
 where 5 = 640/128
 (x = device res width/original cairo surface width)
 and 7.5 = 480/64
 (x = device res height/original cairo surface height)”
-somethng like this (for waveshare 3.5):
 
-    cairo_scale(cr, 3.75,5);     
+
+   
+
+the whole section should look like this (for waveshare 3.5)
+
+    void screen_init(void) {
+    surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, 480, 320;
+    cr = cr_primary = cairo_create(surface);
+
+    status = FT_Init_FreeType(&value);
+    if (status != 0) {
+        fprintf(stderr, "ERROR (screen) freetype init\n");
+        return;
+    }
+    cairo_scale(cr, 3.75,5);
+    
+    strcpy(font_path[0], "04B_03__.TTF");
+    strcpy(font_path[1], "liquid.ttf");
+    
 
 
 **Norns: (if your screen is showing a terminal window -(pi3))
