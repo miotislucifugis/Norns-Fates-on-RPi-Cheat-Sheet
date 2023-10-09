@@ -23,13 +23,14 @@ Add a # before the amixer line
 # Build a custom encoder overlay using one of these as a template  (for GPIO-wired encoders!!): 
 https://github.com/okyeron/fates/tree/master/overlays
 Build the overlay file from the .dts  with dtc  and copy it to /boot/overlays
-Enable it in /boot/config.txt
+Enable it in  /boot/config.txt
 As shown here:  https://github.com/AkiyukiOkayasu/RaspberryPi_I2S_Master
 
 # Fix screen 
 ./norns/matron/src/hardware/screen.c
 
 Change resolution in this line to your screen’s resolution in this line:
+
 surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, 480, 320);
 
 Then…“Add this line after the function block with your scale factor
@@ -41,7 +42,7 @@ and 7.5 = 480/64
 cairo_scale(cr, 3.75,5);     (for waveshare 3.5)
 
 **Norns: (if your screen is showing a terminal window -(pi3))
- ./norns/matronrc.lua
+./norns/matronrc.lua
 change fb0 to fb1 
 
 Then recompile Norns with waf
