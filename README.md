@@ -1,10 +1,14 @@
-# Norns-Fates-on-RPi-Cheat-Sheet
-A cheat sheet for installing Norns/Fates on Raspberry Pi
+# Norns-Fates-on-RPi-Cheat-Sheet  2023
+A cheat sheet for installing Norns/Fates on Raspberry Pi.   
+Most of the info here was found at:  https://llllllll.co/t/norns-on-raspberry-pi/14148  
 
-Choose a precompiled .img and burn it  to SD.  Add your necessary screen and audio codec overlays to /boot/overlays if they arent already present.
-Boot up.   Should display  some type of “jack fail” message.
+# Get Norns or fates .img
+Choose the appropriate precompiled .img and burn it  to SD.  (Norns vs Norns shieled vs Fates? Essentially they are all the same with minir changes for hardware revision,  for installing on Rpi w/ custom hardware, other than choosing the Pi3 or Pi4 .img, it doesnt matter which version you choose.  Norns is the "official" version maintained by Monome while Fates is a (currently up to date) fork.  Fates seems a little easier to install- Norns may involve a few extra steps as noted with **.)
 
-Change/set up jack service:
+Afterward, add your necessary screen and audio codec overlays to /boot/overlays if they arent already present.
+Boot up.   Should display  some type of “jack fail” message.  SSH in and expand the disk as explained in the norns/fates install instructions.
+
+# Change/set up jack service:
 Change the alsa device to your device in these files: 
  /etc/systemd/system/norns-jack.service
  ./norns-image/config/norns-jack.service    (not necessary)
@@ -14,13 +18,13 @@ Change the alsa device to your device in these files:
  /etc/rc.local
 Add a # before the amixer line
 
-Build a custom encoder overlay using one of these as a template:
+# Build a custom encoder overlay using one of these as a template  (for GPIO-wired encoders!!): 
 https://github.com/okyeron/fates/tree/master/overlays
 Build the overlay file from the .dts  with dtc  and copy it to /boot/overlays
 Enable it in /boot/config.txt
 As shown here:  https://github.com/AkiyukiOkayasu/RaspberryPi_I2S_Master
 
-Fix screen 
+# Fix screen 
 ./norns/matron/src/hardware/screen.c
 
 Change resolution in this line to your screen’s resolution in this line:
@@ -45,18 +49,19 @@ cd norns
 ./waf configure
 ./waf -j 1
 
-Enable uart midi:
+# Enable uart midi:
 Follow the steps here:
 https://github.com/okyeron/shieldXL
 
-Remove blinking cursor:
+# Remove blinking cursor:
+after getting the screen working i still had a command line cursor present in the background.  to remove:
 https://techoverflow.net/2021/10/19/how-to-hide-all-boot-text-blinking-cursor-on-raspberry-pi/
 
  /boot/cmdline.txt
 change :  console=tty3  (tty1 to tty3)
 Add at the end of the line:   loglevel=3 quiet logo.nologo vt.global_cursor_default=0
 
-Add Orac/Sidekick
+# Add Orac/Sidekick
 Install orac :   https://llllllll.co/t/orac-sidekick-pure-data-and-sc-for-norns/26198
 
 If your sidekick display is “invisible”:
