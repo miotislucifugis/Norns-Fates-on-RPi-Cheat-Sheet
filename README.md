@@ -13,7 +13,9 @@ Boot up.   Should display  some type of “jack fail” message.  SSH in and exp
 # Change/set up jack service:
 Change the alsa device to your device in these files: 
  /etc/systemd/system/norns-jack.service
+ 
  ./norns-image/config/norns-jack.service    (not necessary)
+ 
 ./fates/install/norns/files/norns-jack.service   (not necessary)
 
 **Norns: if your codec does not have amixer controls, disable the amixer call in:  
