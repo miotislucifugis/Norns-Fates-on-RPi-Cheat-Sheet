@@ -75,9 +75,11 @@ https://techoverflow.net/2021/10/19/how-to-hide-all-boot-text-blinking-cursor-on
 
  /boot/cmdline.txt
  
-change :  console=tty3  (tty1 to tty3)
+change :  console=tty1 to console=tty3
 
-Add at the end of the line:   loglevel=3 quiet logo.nologo vt.global_cursor_default=0
+Add at the end of the line:  
+
+loglevel=3 quiet logo.nologo vt.global_cursor_default=0
 
 # Add Orac/Sidekick
 Install orac :   https://llllllll.co/t/orac-sidekick-pure-data-and-sc-for-norns/26198
