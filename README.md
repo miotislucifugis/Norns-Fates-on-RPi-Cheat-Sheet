@@ -33,7 +33,7 @@ norns will not start if jack doesnt connect, so we need to configure jack servic
  
       ./fates/install/norns/files/norns-jack.service   (not necessary)
 
-Just change the bit about the device (-d hw:sndrpimonome)  
+Just change the bit about the device (-d hw:sndrpimonome) to:
 
       -d hw:your_card_name
       
