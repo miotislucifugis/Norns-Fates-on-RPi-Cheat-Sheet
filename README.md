@@ -1,7 +1,7 @@
 # Norns-Fates-on-RPi-Cheat-Sheet  2023
 I recently spent a bit of time trying to figure out how to install Norns on an Rpi with custom hardware and thought I'd share all the steps: file names, locations, edits, and links in one convienent cheat sheet.  Its not really a tutorial per se; but if you know some basic command line navigation, it should be pretty simple.   (hint: "sudo nano filename" to edit files,  "cd directory name" to change directories)     
 
-Tested with both norns and fates on a Pi3, but it should be basically the same formula for pi4. Im using a waveshare 3.5A display,  a diy codec (pcm5102 Dac + pmc1802 Adc (in "master" mode) + external 12.288 mhz crystal for the system clock), and encoders/switch wired directly to the GPIO. 
+Tested with both norns and fates on a Pi3, but it should be basically the same formula for pi4. Im using a waveshare 3.5A display,  a diy codec (pcm5102 Dac + pmc1802 Adc (in "master" mode) + external 12.288 mhz crystal for the system clock+ this dtoverlay: https://github.com/AkiyukiOkayasu/RaspberryPi_I2S_Slave), and encoders/switch wired directly to the GPIO. 
 
 Most of the info here was found at:  https://llllllll.co/t/norns-on-raspberry-pi/14148    (The thread is long!  Check here for how to get hdmi or full headless w/ vnc working.   A lot of good stuff, but there was a big change in the norns code in 2022, so some of the info/steps posted prior to that may no longer be relavant or work.)
 
