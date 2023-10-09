@@ -153,7 +153,7 @@ https://techoverflow.net/2021/10/19/how-to-hide-all-boot-text-blinking-cursor-on
 Install orac :   https://llllllll.co/t/orac-sidekick-pure-data-and-sc-for-norns/26198
 (I reccommend doing this even if you arent interested in Orac.  Norns "seems" to run better, smoother afterward.   ?)
 
-If your sidekick display is “invisible”:
+If your sidekick display is “invisible”? - launching sidekick seems to freeze your norns?   Sidekick is actually there but I think it is "talking" to the wrong screen. I think it is a bug, but here is a hacky work-around- just restart sidekick.   here is how to make this happen automatically evrytime you boot:
 
 *create a restart script  for sidekick:
 
@@ -165,6 +165,11 @@ If your sidekick display is “invisible”:
 
      sudo systemctl restart sidekick
 
+*make the script exicutable:
+
+      sudo chmod u+x sidekickrestart.sh
+
+
 *open crontab 
 
      crontab -e  
@@ -173,7 +178,12 @@ If your sidekick display is “invisible”:
 
      @reboot sh sidekickrestart.sh
 
-To do:   Resize orac/sidekick to fit screen resolution... Currently the display is 128x64.   Change it by editing the scale in nuilite code (NuiDevice.cpp)  and recompiling. 
+Now you can see the sidekick menu and launch Orac!
+
+
+To do:   Resize orac/sidekick to fit screen resolution... Currently the display is 128x64.   Change it by editing the scale in nuilite code (NuiDevice.cpp)  and recompiling.
+
+Currently, Im not getting midi in to orac, but I havent messed with it enough, could just be user error.
  
 
 
