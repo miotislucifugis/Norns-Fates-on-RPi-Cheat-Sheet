@@ -38,9 +38,11 @@ https://github.com/okyeron/fates/tree/master/overlays
 As shown here:  https://github.com/AkiyukiOkayasu/RaspberryPi_I2S_Master
 
 # Fix screen 
+norns expects a 128x64 display.  if you are using something larger, Norns will appear tiny! so we need to change the resolution and scale:
+
     ./norns/matron/src/hardware/screen.c
 
-*Change resolution in this line to your screen’s resolution in this line (around line 86):
+*Change resolution in this line (around line 86) to your screen’s resolution:
 
      surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, 120, 60);
 
@@ -50,7 +52,7 @@ where 5 = 640/128
 and 7.5 = 480/64
 (x = device res height/original cairo surface height)”
 
-
+     cairo_scale(cr, 3.75,5);
    
 
 the whole section should look like this (for waveshare 3.5)
@@ -69,7 +71,7 @@ the whole section should look like this (for waveshare 3.5)
     strcpy(font_path[0], "04B_03__.TTF");
     strcpy(font_path[1], "liquid.ttf");
     
-
+!remember, the original screen is 2x1, so if you want to keep the proportions the same, use the same number for the scaler.  
 
 **Norns: (if your screen is showing a terminal window -(pi3))
 
