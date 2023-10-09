@@ -1,5 +1,5 @@
 # Norns-Fates-on-RPi-Cheat-Sheet  2023
-I recently spent a bit of time trying to figure out how to install Norns on my diy Zynthian hardware and thought I share what I learned in one convienent cheat sheet.  
+I recently spent a bit of time trying to figure out how to install Norns on my diy Zynthian hardware and thought I'd all the steps and links in one convienent cheat sheet. 
 Most of the info here was found at:  https://llllllll.co/t/norns-on-raspberry-pi/14148    (The thread is long!  Check here for how to get hdmi or full headless working.   A lot of good stuff, but there was a big change in the norns code in 2022, so some of the info/steps posted prior to that may no longer be relavant or work.)
 
 # Get Norns (or Fates) .img
@@ -11,7 +11,7 @@ Afterward, add your necessary screen and audio codec overlays to /boot/overlays 
 Boot it up.   If you have a screen attached and it is enabled with the proper overlay, it should  display  some type of “jack fail” message.  SSH in and expand the disk as explained in the norns/fates install instructions.
 
 # Change/set up jack service:
-*Change the alsa device to your device in these files: 
+*Change the alsa device to your device (as listed aplay and arecord) in these files: 
  
  /etc/systemd/system/norns-jack.service
  
@@ -66,6 +66,8 @@ cd norns
 ./waf configure
 
 ./waf -j 1
+
+# Heads up -  You may (very likely) will have to redo these jack and screen configurations steps again after Updating Norns!
 
 # Enable uart midi:
 *Follow the steps here:
