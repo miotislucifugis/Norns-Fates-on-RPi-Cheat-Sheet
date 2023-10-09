@@ -27,7 +27,7 @@ Most of the info here was found at:  https://llllllll.co/t/norns-on-raspberry-pi
 
      sudo nano your__overlay.dts
 
-*copy/paste one of the encoder overlay from the following link templates inside and replace the GPIO pin numbers with the your GPIOs
+*copy/paste one of the encoder overlay templates from the following link inside and replace the GPIO pin numbers with the your encoder GPIOs
 https://github.com/okyeron/fates/tree/master/overlays.    Save. Exit 
 
 *Build the overlay file from the .dts  with dtc and copy it to /boot/overlays
